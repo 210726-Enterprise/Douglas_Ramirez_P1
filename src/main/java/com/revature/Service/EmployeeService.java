@@ -30,6 +30,11 @@ public class EmployeeService {
         mapper = new ObjectMapper();
     }
 
+    /**
+     * Service to get all employees in the database
+     * @param req (unused)
+     * @param resp mapped to a json format.
+     */
     public void getAllEmployees(HttpServletRequest req, HttpServletResponse resp) {
         try {
             @SuppressWarnings("unchecked")
@@ -44,13 +49,15 @@ public class EmployeeService {
             logger.warn(e.getMessage(), e);
         }
     }
+
+    /**
+     * Service to insert a new entry in the employees table.
+     * @param req data read to insert new employee
+     * @param resp representing status code
+     */
     public void insertEmployee(HttpServletRequest req, HttpServletResponse resp) {
         try {
             String requestData = req.getReader().lines().collect(Collectors.joining());
-//            StringBuilder builder = new StringBuilder();
-//            req.getReader().lines()
-//                    .collect(Collectors.toList())
-//                    .forEach(builder::append);
 
             employees employee = mapper.readValue(requestData, employees.class);
             int result = insert(employee);
@@ -69,6 +76,11 @@ public class EmployeeService {
         }
     }
 
+    /**
+     * Service to update an existing employee's information
+     * @param req to get data to update employee
+     * @param resp representing status code and json output
+     */
     public void updateEmployee(HttpServletRequest req, HttpServletResponse resp) {
         StringBuilder builder = new StringBuilder();
         try {
@@ -99,6 +111,11 @@ public class EmployeeService {
 
     }
 
+    /**
+     * Service to delete an existing employee
+     * @param req used to collect data for deleting an employee
+     * @param resp representing status code
+     */
     public void deleteEmployee(HttpServletRequest req, HttpServletResponse resp) {
         StringBuilder builder = new StringBuilder();
 
