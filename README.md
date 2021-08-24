@@ -2,17 +2,12 @@
 
 ## Description
 
-Your first project will be to create a custom object relational mapping (ORM) framework. This framework will allow for a simplified and SQL-free interaction with the relational data source. The requirements of the project are purposefully vague, the intention is to allow for you to be creative in your implementation of this framework. There are many ways that this task can be approached, and you are encouraged to explore existing Java ORM implementations in order to get some inspiration. The minimum requirement for the custom ORM is to abstract JDBC boilerplate logic from the application which uses it.
-
-Additionally, you will need to build a simple CRUD web application (what objects you CRUD is up to you). You should leverage the Java EE Servlet API to expose endpoints that allow for interaction with the application.
+This project will involve creating a custom object relational mapping (ORM) framework and using it to create a web application that utilized this custom ORM.
 
 ## Tech Stack
 
 - [ ] Java 8
-- [ ] JUnit
-- [ ] Mockito
 - [ ] Apache Maven
-- [ ] Jackson library (for JSON marshalling/unmarshalling)
 - [ ] Java EE Servlet API (v4.0+)
 - [ ] PostGreSQL deployed on AWS RDS
 - [ ] Git SCM (on GitHub)
