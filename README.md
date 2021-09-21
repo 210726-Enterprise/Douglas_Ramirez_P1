@@ -26,6 +26,27 @@ This project will involve creating a custom object relational mapping (ORM) fram
 - [ ] Generate Jacoco reports that display coverage metrics
 - [ ] Usage of the java.util.Stream API
 
+## Getting Started
+- [ ] To start off, git clone the project with the command: git clone https://github.com/210726-Enterprise/Douglas_Ramirez_P1.git
+- [ ] Create a database and a schema
+- [ ] In your environment variables, create 3 variables with your database information under the names db_url, db_username, and db_password
+- [ ] Run your application in an IDE such as IntelliJ
+ 
+- [ ] Download and open the program Postman to test http commands
+- [ ] All testing will be done to localhost:8080
+- [ ] Under the /employees endpoint, run a GET to receive all users registered in your database.
+ 
+- [ ] For registering a user, we will be running a POST instead of a GET.
+- [ ] Under the body section, select the RAW type and in JSON format, give information for employee_id, first_name, last_name, and email.
+- [ ] Run the POST command and look for a successful status code.
+
+- [ ] For updating an existing user's information, we will be running a PUT isntead of a POST.
+- [ ] Under the body section, select the RAW type and in JSON format, give information for employee_id, first_name, last_name, and email.
+- [ ] Run the PUT command and look for a JSON response with the update information.
+ 
+- [ ] For deleting an existing user, we will be running a DELETE instead of a PUT
+- [ ] Under the body section, select the RAW type and in JSON format, give information for employee_id.
+- [ ] Run the DELETE command and look for a successful response code.
 
 ## Init Instructions
 
